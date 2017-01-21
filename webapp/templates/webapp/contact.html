@@ -1,0 +1,40 @@
+
+{% extends "webapp/base.html" %}
+
+{% block content%}
+<section id="feedback" class="blog">
+    <div class="container">
+      <div class="row">
+	
+        <h1 class="section-title"><span>Contact <br>Me</span></h1><hr/>
+        <div class="col-sm-8 col-md-8 col-sm-offset-2">
+	<div class="panel-body" >
+		{% if error %}
+		<h2> {{ error }}</h2>
+		{% endif %}
+
+          <form action="{% url 'send' %}" method="post">
+		{% csrf_token %}
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-user"></i></span>
+              <input type="text" name="name" class="form-control" placeholder="Your name">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+              <input type="email" name="mail" class="form-control" placeholder="Email">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-comments"></i></span>
+              <textarea name="message" class="form-control large" placeholder="What do you want to say?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-green"><i class="fa fa-envelope-o"></i>Send</button>
+          </form>
+
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+
+{% extends "webapp/base.html" %}
+
+{% block content%}
+<div class="container-fluid">
+<div class="col-sm-8 col-md-8 col-sm-offset-2" >
+
+</div>
+</div>
+	<section class="blog">
+		<div class="container">
+      		<div class="row">
+		<h1 class="section-title" style="color:white;"><span>Post's</span></h1><hr/>
+		</div></div>
+	{% for post in blog %}
+		
+		<div class="container-fluid">
+		<div class="row">
+	
+		<div class="col-sm-8 col-md-8 col-sm-offset-2" >
+			<div class="panel panel-default" style="background-color:lavender">
+			<h3 class="panel-heading">
+			<a href="{% url 'detail' post.id %}"> {{ post.title }}</a><small> {{ post.date|timesince }} ago</small> </h3>
+				<div class="thumbnail">{% if post.image %}
+					
+					<img class="img-responsive" src={{ post.image.url }}>
+					
+				{% endif %}
+				<caption> {{ post.body }} </caption></div> 	
+				
+
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+	{% endfor %}
+	</section>
+{% endblock %}
+
+
+{# blog = Blog.objects.get(pk=post.id) }}
+{# count = len(blog.comment_set.all()) }}

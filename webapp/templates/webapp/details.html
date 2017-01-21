@@ -1,0 +1,53 @@
+
+{% extends "webapp/base.html" %}
+
+{% block content%}
+<section class="blog">
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="container-fluid">
+		<div class="row">
+	
+		<div class="col-sm-8 col-md-8 col-sm-offset-2" >
+			<div class="panel panel-default" style="background-color:lavender">
+			<h3 class="panel-heading">
+			{{ post.title }}<small> {{ post.date }}</small> </h3>
+				<div class="thumbnail">
+				{% if post.image %}
+					<img class="img-responsive" src={{ post.image.url }}>
+				{% endif %}
+				<caption> {{ post.body }} </caption>
+				</div> 	
+				<h4 class="panel-footer"> Comments </h4>
+			{% if error %}
+			<h5 style="color:red;">{{ error }}</h5>
+			{% endif %}
+			
+			<form class="panel-body" action="{% url 'comment' post.id %}" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				Name:<input type="text" name="name"><br/>
+				Comment:<textarea cols="40"  name="content" rows="2"></textarea>
+				
+				<input type="submit" class="btn-info" value="Comment">
+			</form>
+
+				
+				{% for comment in post.comments_set.all %}
+					<div class="panel panel-group">
+					<h3 class="panel-heading">{{ comment.name }}</h3><hr/>
+					{% if comment.pic %}
+						<img class="img-responsive" src={{ comment.pic.url }}>
+					{% endif %}
+					<p class=" panel-body">{{ comment.comment }}</p>
+					</div>
+				{% endfor %}
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+</div></section>
+
+
+{% endblock %}

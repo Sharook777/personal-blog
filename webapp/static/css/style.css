@@ -1,0 +1,110 @@
+
+
+	body{
+		background:white url('../images/img4.jpg');
+		background-attachment:fixed;
+	}
+
+	.navbar-brand{
+		font-family:"Satisfy";
+	}
+
+	.blog{
+		padding-top:100px;
+	}
+
+	.fo{
+		text-align:center;
+		padding:15px;
+		color:white;
+	}
+	.panel-deafault{
+		border-radius:0px;
+	}
+
+
+
+
+/* Feedback Section Start */
+#feedback {
+  background-size: cover;
+}
+#feedback .section-title {
+  color: lavender;
+}
+#feedback .input-group {
+  padding-bottom: 20px;
+}
+#feedback .input-group .input-group-addon {
+  border-radius: 0px;
+  padding: 14px 26px;
+  background-color: lightblue;
+  border: none;
+  position: relative;
+}
+#feedback .input-group .input-group-addon i {
+  color: grey;
+  font-size: 26px;
+  width: 24px;
+  height: 24px;
+}
+#feedback .input-group .form-control {
+  color: #898989;
+  font-size: 22px;
+  font-weight: 300;
+  padding: 15px 20px;
+  height: 60px;
+  border: 0;
+  border-radius: 0px;
+}
+#feedback .input-group .form-control:focus {
+  box-shadow: none;
+}
+#feedback .input-group .large {
+  height: 120px;
+}
+#feedback .btn-green {
+  color: black;
+  font-weight: 400;
+  background: lightgreen;
+  font-size: 22px;
+  width: 100%;
+  border-radius: 0px;
+  text-transform: uppercase;
+  height: 60px;
+}
+#feedback .btn-green i {
+  float: left;
+  width: 74px;
+  background: lightblue;
+  margin: -12px;
+  line-height: 56px;
+  height: 60px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+/* Footer Section Start */
+#footer {
+  color: #ffffff;
+  width: 100%;
+  background: #28363f;
+  border-top: 1px solid #ffffff;
+}
+#footer .row {
+  padding: 20px 0;
+}
+#footer p {
+  font-size: 18px;
+  font-weight: 400;
+}
+#footer a {
+  color: #82bc00;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: #6c9c01;
+}
+/* Footer Section End */

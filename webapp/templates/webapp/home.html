@@ -1,0 +1,130 @@
+
+{% extends "webapp/base.html" %}
+
+{% block content %}
+{% load staticfiles%}
+<style>
+	h3{color:"white;"}
+</style>
+<section class="blog">
+	<div class="container">
+   	<div class="row ">
+        <div class="col-md-12">
+        	<div id="carousel-example" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+                        	<li data-target="#carousel-example" data-slide-to="0" class=""></li>
+                       	 	<li data-target="#carousel-example" data-slide-to="1" class=""></li>
+                        	<li data-target="#carousel-example" data-slide-to="2" class=""></li>
+				
+
+                    	</ol>
+
+                    	<div class="carousel-inner">
+                        <div class="item">
+                            	<div class="container center">
+                                <div class="col-md-6 col-md-offset-3 slide-custom">
+                                   
+                                    <h3><i class="fa fa-quote-left"></i>
+                                         Anyone who never made a mistake has never tried anything new
+                                        <i class="fa fa-quote-right"></i><br/><strong> -Albert Einstein</strong></h3>
+                                     
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item active left">
+                            <div class="container center">
+                                <div class="col-md-6 col-md-offset-3 slide-custom">
+                                    <h3> <i class="fa fa-quote-left"></i> EveryOne should know how to program a computer, because it teaches you how to think! <i class="fa fa-quote-right"></i><br><strong> -Steve Jobs</strong></h3>
+                                 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item active left">
+                            <div class="container center">
+                                <div class="col-md-6 col-md-offset-3 slide-custom">
+                                    <h3><i class="fa fa-quote-left"></i>Measuring programming program by lines of code is like measuring aircraft building by weight   <i class="fa fa-quote-right"></i><br> <strong> -Bill Gates</strong></h3>
+                                        
+                                    
+                                </div>
+                            </div>
+                        </div>
+			
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </section>
+     <!--END TESTIMONIAL SECTION-->
+
+
+
+
+
+<!--SHYM-USER STARTS HERE -->
+	
+<section class='shym-user'>
+<div class='container'>
+	 <div class="row">
+	<div class='col-md-4 ' >
+        	<hr>
+        	
+        
+      
+      <!--======= SLIDER PART =========-->
+      <div id="owl-team"> 
+        
+        <!--======= SLIDER PART =========-->
+        <div class="team  ">
+          <div class="img col-md-offset-2"> <img class="img-responsive" src="{% static 'images/team-1.jpg' %}" alt="srk" >
+            <div class="over">
+			<i class="fa fa-user"></i>
+              <div class="des"> <a href="#"></a>
+                <p style="color: white;">I am sharook. I am a web developer and programmer. This is my first blog site developed
+			 using bootstrap and django frameworks. I am making myself perfect in programming.</p>
+              </div>
+            </div>
+          </div>
+        </div></div>
+
+
+
+<!-- Feedback Section Start -->
+<section id="feedback">
+    <div class="container" style="margin-left=10px;">
+      <div class="row">
+        <h1 class="section-title"><span>Contact <br>Us</span></h1>
+        
+        <div class="col-sm-4 col-md-4 col-md-offset-2">
+          <div class="address">
+           
+            <ul class="contact-info">
+	      <li><i class="fa fa-home"></i>PALAKKAD, KERALA </li>
+              <li><i class="fa fa-phone"></i>9946341536</li>
+              <li><i class="fa fa-envelope-o"></i>sharookcs@gmail.com</li>
+            </ul>
+          
+          <h2>Follow Me</h2>
+            <ul class="social-icon">
+              <li><a href="http://facebook.com/sharook.srk.9/"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/sharooka-267b91109"><i class="fa fa-linkedin"></i></a></li><br/>
+              
+            </ul>
+		
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+        
+</section>
+
+<script src="{% static 'ad/js/jquery.js' %}"></script>   
+<script type="text/javascript" src="{% static 'ad/js/owl.carousel.min.js' %}"></script> 
+<script src="{% static 'ad/js/function.js' %}"></script>
+
+
+{% endblock %}
